@@ -33,12 +33,17 @@
         <attribute name="username" attributeType="String"/>
         <relationship name="favorits" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Product"/>
         <relationship name="myProducts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="owner" inverseEntity="Product"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="email"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
         <element name="Admin" positionX="-18" positionY="-90" width="128" height="59"/>
         <element name="Category" positionX="186.2462158203125" positionY="-57.31591796875" width="128" height="88"/>
+        <element name="Company" positionX="-9" positionY="-81" width="128" height="29"/>
         <element name="Product" positionX="-35.32470703125" positionY="-266.0763244628906" width="128" height="163"/>
         <element name="User" positionX="-246.5825805664062" positionY="-158.0758361816406" width="128" height="209"/>
-        <element name="Company" positionX="-9" positionY="-81" width="128" height="29"/>
     </elements>
 </model>
